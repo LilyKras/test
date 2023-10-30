@@ -11,7 +11,7 @@ class FirstStepPage extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            title:  const Text('Ordering'),
+            title: const Text('Ordering'),
             pinned: true,
             leading: IconButton(
                 onPressed: () {}, icon: const Icon(Icons.arrow_back_ios)),
@@ -19,10 +19,13 @@ class FirstStepPage extends StatelessWidget {
           SliverList(
             delegate: SliverChildListDelegate(
               [
-                 Center(
+                Center(
                     child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text('Step 1', style: Theme.of(context).textTheme.titleMedium,),
+                  child: Text(
+                    'Step 1',
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
                 )),
                 const AddressDetails(
                   title: 'Sender details',
@@ -33,7 +36,7 @@ class FirstStepPage extends StatelessWidget {
                     country: '',
                     city: '',
                     postCode: 0,
-                    adressLine: ['a'],
+                    adressLine: ['a', 'b'],
                   ),
                 ),
                 const SizedBox(

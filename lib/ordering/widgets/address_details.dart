@@ -16,7 +16,10 @@ class AddressDetails extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: Theme.of(context).textTheme.titleSmall,),
+          Text(
+            title,
+            style: Theme.of(context).textTheme.titleSmall,
+          ),
           const ModeSwitcher(),
           AddressInfo(
             address: address,

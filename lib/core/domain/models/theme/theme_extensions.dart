@@ -12,8 +12,7 @@ class ThemeColors extends ThemeExtension<ThemeColors> {
     Color? roundedBorderColor,
   }) {
     return ThemeColors(
-      roundedBorderColor:
-          roundedBorderColor ?? this.roundedBorderColor,
+      roundedBorderColor: roundedBorderColor ?? this.roundedBorderColor,
     );
   }
 
@@ -36,9 +35,7 @@ class ThemeColors extends ThemeExtension<ThemeColors> {
         roundedBorderColor: Color(0xFFA9B5C1),
       );
 
-  static get dark => const ThemeColors(
-        roundedBorderColor: Colors.white
-      );
+  static get dark => const ThemeColors(roundedBorderColor: Colors.white);
 }
 
 class ThemeGradients extends ThemeExtension<ThemeGradients> {
