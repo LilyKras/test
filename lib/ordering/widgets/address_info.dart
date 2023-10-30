@@ -2,28 +2,64 @@ import 'package:flutter/material.dart';
 import 'package:test_form/core/domain/models/address/address.dart';
 import 'package:test_form/ordering/widgets/address_field.dart';
 
-class AddressInfo extends StatelessWidget {
+class AddressInfo extends StatefulWidget {
   const AddressInfo({super.key, required this.address});
   final Address address;
+
+  @override
+  State<AddressInfo> createState() => _AddressInfoState();
+}
+
+class _AddressInfoState extends State<AddressInfo> {
+  final List<String> startAdresses = List.empty(growable: true);
+
+  @override
+  void initState() {
+    startAdresses.addAll(widget.address.adressLine);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     // if (mode == DetailsMode.add) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        AddressField(
+        const AddressField(
           title: 'Full name*',
           icon: Icons.person,
-          field: address.fullName,
         ),
-        AddressField(title: 'Email*', icon: Icons.email, field: address.email),
-        AddressField(title: 'Phone*', icon: Icons.phone, field: address.phoneNumber),
+        const AddressField(title: 'Email*', icon: Icons.email),
+        const AddressField(
+          title: 'Phone*',
+          icon: Icons.phone,
+        ),
         const Divider(),
-       AddressField(title: 'Country*', icon: Icons.location_on_rounded,  field: address.country),
-        AddressField(title: 'City*', icon: Icons.location_city_outlined, field: address.city),
-        AddressField(title: 'Address line 1*', icon: Icons.nature, field: address.adressLine[0]),
-        AddressField(
-            title: 'Postcode*', icon: Icons.indeterminate_check_box, field: address.postCode.toString()),
+        const AddressField(
+          title: 'Country*',
+          icon: Icons.location_on_rounded,
+        ),
+        const AddressField(
+          title: 'City*',
+          icon: Icons.location_city_outlined,
+        ),
+        for (int i = 0; i < startAdresses.length; i++) ...[
+          AddressField(
+            title: 'Address line ${i + 1}*',
+            icon: Icons.nature,
+          ),
+        ],
+        TextButton(
+            onPressed: () {
+              setState(() {
+                startAdresses.add('');
+              });
+            },
+            child: const Text('Add address line +')),
+        const AddressField(
+          title: 'Postcode*',
+          icon: Icons.indeterminate_check_box,
+        ),
       ],
     );
     // } else{

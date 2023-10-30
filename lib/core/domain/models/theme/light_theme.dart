@@ -10,7 +10,8 @@ ThemeData createLightTheme() {
       titleSmall: TextStyle(
           color: Colors.black, fontSize: 16, fontWeight: FontWeight.w700),
     ),
-    dividerTheme: const DividerThemeData(color: Color(0xFFE7ECF0), thickness: 1),
+    dividerTheme:
+        const DividerThemeData(color: Color(0xFFE7ECF0), thickness: 1),
     iconTheme: const IconThemeData(color: Color(0xFF677482)),
     brightness: Brightness.light,
     extensions: <ThemeExtension<dynamic>>[
@@ -23,17 +24,24 @@ ThemeData createLightTheme() {
       titleTextStyle: TextStyle(
           color: Colors.black, fontSize: 20, fontWeight: FontWeight.w700),
     ),
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+          foregroundColor: const Color(0xFFEA560D),
+          textStyle:
+              const TextStyle(fontSize: 16, fontWeight: FontWeight.w500,),),
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-      elevation: 0,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
+      style: ElevatedButton.styleFrom(
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+        disabledBackgroundColor: const Color(0xFF919EAB),
+        disabledForegroundColor: const Color(0xFFE7ECF0),
+        backgroundColor: const Color(0xFFEA560D),
+        foregroundColor: Colors.white,
+        textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
       ),
-      disabledBackgroundColor: const Color(0xFF919EAB),
-      disabledForegroundColor: const Color(0xFFE7ECF0),
-      backgroundColor: const Color(0xFFEA560D),
-      foregroundColor: Colors.white,
-      textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-    )), 
+    ),
   );
 }
