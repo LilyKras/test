@@ -26,9 +26,12 @@ ThemeData createLightTheme() {
     ),
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
-          foregroundColor: const Color(0xFFEA560D),
-          textStyle:
-              const TextStyle(fontSize: 16, fontWeight: FontWeight.w500,),),
+        foregroundColor: const Color(0xFFEA560D),
+        textStyle: const TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.w500,
+        ),
+      ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(

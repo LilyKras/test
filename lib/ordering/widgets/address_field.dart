@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test_form/core/domain/models/theme/theme_extensions.dart';
 
 class AddressField extends StatelessWidget {
-  const AddressField(
-      {super.key, required this.title, required this.icon});
+  const AddressField({super.key, required this.title, required this.icon});
   final String title;
   final IconData icon;
 

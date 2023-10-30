@@ -40,6 +40,9 @@ dependencies:
   freezed_annotation: ^2.4.1
   json_annotation: ^4.8.1
   json_serializable: ^6.7.1
+  hooks_riverpod: ^2.4.5
+  riverpod: ^2.4.5
+  flutter_riverpod: ^2.4.5
 
 dev_dependencies:
 

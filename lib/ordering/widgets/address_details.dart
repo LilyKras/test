@@ -10,6 +10,7 @@ class AddressDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isSender = title == 'Sender details';
     return Container(
       padding: const EdgeInsets.all(20),
       color: Colors.white,
@@ -20,9 +21,12 @@ class AddressDetails extends StatelessWidget {
             title,
             style: Theme.of(context).textTheme.titleSmall,
           ),
-          const ModeSwitcher(),
+          ModeSwitcher(
+            isSender: isSender,
+          ),
           AddressInfo(
             address: address,
+            isSender: isSender,
           ),
         ],
       ),

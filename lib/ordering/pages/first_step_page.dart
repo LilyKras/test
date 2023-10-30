@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_form/core/domain/models/address/address.dart';
+import 'package:test_form/ordering/utils/constants.dart';
 import 'package:test_form/ordering/widgets/address_details.dart';
 
 class FirstStepPage extends StatelessWidget {
@@ -29,30 +29,14 @@ class FirstStepPage extends StatelessWidget {
                 )),
                 const AddressDetails(
                   title: 'Sender details',
-                  address: Address(
-                    fullName: '',
-                    email: '',
-                    phoneNumber: '',
-                    country: '',
-                    city: '',
-                    postCode: 0,
-                    adressLine: ['a', 'b'],
-                  ),
+                  address: senderAddress,
                 ),
                 const SizedBox(
                   height: 30,
                 ),
                 const AddressDetails(
                   title: 'Recepient details',
-                  address: Address(
-                    fullName: '',
-                    email: '',
-                    phoneNumber: '',
-                    country: '',
-                    city: '',
-                    postCode: 0,
-                    adressLine: ['a'],
-                  ),
+                  address: recepientAddress,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),

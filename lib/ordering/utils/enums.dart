@@ -1,1 +1,1 @@
-enum DetailsMode { add, select }
+enum DetailsMode { add, select, edit }
